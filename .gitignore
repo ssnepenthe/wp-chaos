@@ -1,0 +1,16 @@
+public/wp/
+vendor/
+.env
+*.log
+
+public/content/mu-plugins/*
+!public/content/mu-plugins/wpc-helpers.php
+!public/content/mu-plugins/index.php
+
+public/content/plugins/*
+!public/content/plugins/index.php
+
+public/content/themes/*
+!public/content/themes/index.php
+
+public/content/uploads/
