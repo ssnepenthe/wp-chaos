@@ -63,6 +63,11 @@ define( 'SECURE_AUTH_SALT', getenv( 'SECURE_AUTH_SALT' ) );
 define( 'LOGGED_IN_SALT', getenv( 'LOGGED_IN_SALT' ) );
 define( 'NONCE_SALT', getenv( 'NONCE_SALT' ) );
 
+// Cron.
+define(
+	'DISABLE_WP_CRON',
+	filter_var( getenv( 'DISABLE_WP_CRON' ), FILTER_VALIDATE_BOOLEAN )
+);
 /**
  * Debugging.
  *

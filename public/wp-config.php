@@ -29,9 +29,6 @@ define( 'AUTOMATIC_UPDATER_DISABLED', true );
 // Disable wp-admin file editors.
 define( 'DISALLOW_FILE_EDIT', true );
 
-// Disable default WP cron.
-define( 'DISABLE_WP_CRON', true );
-
 // Absolute path to WordPress dir.
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );
