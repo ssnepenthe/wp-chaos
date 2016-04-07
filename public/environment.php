@@ -10,18 +10,19 @@ try {
 	$dotenv = new Dotenv\Dotenv( WPC_PROJECT_ROOT );
 	$dotenv->load();
 	$dotenv->required( [
-		'DB_NAME',
-		'DB_USER',
-		'DB_PASSWORD',
-		'WP_HOME',
 		'AUTH_KEY',
-		'SECURE_AUTH_KEY',
-		'LOGGED_IN_KEY',
-		'NONCE_KEY',
 		'AUTH_SALT',
-		'SECURE_AUTH_SALT',
+		'DB_NAME',
+		'DB_PASSWORD',
+		'DB_USER',
+		'LOGGED_IN_KEY',
 		'LOGGED_IN_SALT',
+		'NONCE_KEY',
 		'NONCE_SALT',
+		'SECURE_AUTH_KEY',
+		'SECURE_AUTH_SALT',
+		'WP_HOME',
+		'WP_SITEURL',
 	] );
 } catch ( \Exception $e ) {
 	die( $e->getMessage() );
