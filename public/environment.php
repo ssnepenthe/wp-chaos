@@ -68,13 +68,26 @@ define(
 	'DISABLE_WP_CRON',
 	filter_var( getenv( 'DISABLE_WP_CRON' ), FILTER_VALIDATE_BOOLEAN )
 );
+
+if (
+	! empty( $host = getenv( 'REDIS_HOST' ) ) &&
+	! empty( $port = getenv( 'REDIS_PORT' ) )
+) {
+	$redis_server = [
+	    'host' => $host,
+	    'port' => $port,
+	];
+}
+
 /**
  * Debugging.
  *
- * @todo Seems likely that we will want to be able to override on production.
+ * @todo Do we want to be able to override more specifically per environment?
  */
 define( 'WP_DEBUG', 'production' !== WP_ENV ? true : false );
 define( 'WP_DEBUG_LOG', 'production' !== WP_ENV ? true : false );
 define( 'WP_DEBUG_DISPLAY', 'production' !== WP_ENV ? true : false );
 define( 'SCRIPT_DEBUG', 'production' !== WP_ENV ? true : false );
 define( 'SAVEQUERIES', 'production' !== WP_ENV ? true : false );
+
+unset( $host, $port, $theme );
