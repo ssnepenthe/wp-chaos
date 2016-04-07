@@ -33,7 +33,7 @@ define( 'WP_ENV', getenv( 'WP_ENV' ) ?: 'development' );
 
 // Custom directories and URLs.
 define( 'WP_HOME', getenv( 'WP_HOME' ) );
-define( 'WP_SITEURL', WP_HOME . '/wp' );
+define( 'WP_SITEURL', getenv( 'WP_SITEURL' ) );
 define( 'WP_CONTENT_DIR', WPC_DOCUMENT_ROOT . '/content' );
 define( 'WP_CONTENT_URL', WP_HOME . '/content' );
 
