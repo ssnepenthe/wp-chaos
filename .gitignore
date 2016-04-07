@@ -3,6 +3,8 @@ vendor/
 .env
 *.log
 
+public/content/object-cache.php
+
 public/content/mu-plugins/*
 !public/content/mu-plugins/wpc-helpers.php
 !public/content/mu-plugins/index.php
