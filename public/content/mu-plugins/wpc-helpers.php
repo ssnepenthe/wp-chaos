@@ -68,11 +68,11 @@ add_filter(
  * Autoload Composer wordpress-muplugin packages via ssnepenthe/horme package.
  */
 function wpc_horme_autoloader() {
-	if ( ! is_blog_installed() ) {
+	if ( ! is_blog_installed() || ! defined( WPC_PROJECT_ROOT ) ) {
 		return;
 	}
 
-	$loader = new SSNepenthe\Horme\Horme( WPC_PROJECT_ROOT );
+	$loader = new SSNepenthe\Horme\Horme( WPC_PROJECT_ROOT, __FILE__ );
 	$loader->init();
 }
 add_action( 'muplugins_loaded', 'wpc_horme_autoloader', 0 );
